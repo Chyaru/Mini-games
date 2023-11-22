@@ -6,12 +6,6 @@
 #include<vector>
 #include<istream>
 #include<iomanip>
-#include "Jugador.h"
-#include "Ahorcado.h"
-#include"Buscaminas.h"
-#include "SaltoContraComputadora.h"
-#include "Tetris.h"
-#include "TypeSong.h"
 
 using namespace std;
 
@@ -19,6 +13,12 @@ using namespace std;
 #define forn(i, n) for(int i = 0; i < int(n); i++)
 #define pb  push_back
 
+#include "Jugador.h"
+#include "Ahorcado.h"
+#include"Buscaminas.h"
+#include "SaltoContraComputadora.h"
+#include "Tetris.h"
+#include "TypeSong.h"
 const int N_juegos = 5;
 string juego[5] = {
     "TypeSong", "Hanging", "Jumping", "Minesweeper", "Tetris"
@@ -39,7 +39,6 @@ int main(){
     char eleccion;
     cout<<"...Starting...";
 
-    jugadores.pb({});
     do{
         Sleep(3*seg);
         system("cls");
@@ -49,8 +48,7 @@ int main(){
         int g = index_de_jugador(nombre_de_usuario);
         if(g==-1){
             g = jugadores.size();
-            Jugador abogado;
-            abogado.Nickname = nombre_de_usuario;
+            Jugador abogado = Jugador(nombre_de_usuario);
             jugadores.push_back(abogado);
         }
         Jugador &player = jugadores[g];
@@ -136,7 +134,7 @@ int main(){
 
 }
             case '2':{
-            Ahorcado ahorcado; 
+            Ahorcado ahorcado;
             cout<<"Choose difficulty\n1.Easy\n2.Medium\n3.Hard\n";
             int dificultad;
             cin>>dificultad;
@@ -231,7 +229,7 @@ int main(){
             cout<<"Welcome to minesweeper \n";
             cout<<"Choose difficulty \n";
             cout<<"1.-Easy \n"<<"2.-Medium\n"<<"3.-Hard\n";
-            
+
 
             cin>>nn;
 
@@ -309,7 +307,7 @@ int main(){
             cout << "You will play Tetris version Chyaru!\n"<<
                     "You will be shown the piece, and you must decide whether to change piece\n" <<
                     "and with the little arrows move it from left to right.\n"<<
-                    "You can also decide the size of the game space, with N and M (with values less than 50)\n"<<
+                    "You can also decide the size of the game space, with N and M (with values less than 50)\n";
             Sleep(7 * seg);
             cout << "With the 'w' key you change the piece (you can't make more than 2 changes in a row\n"<<
                     "With the 'a' key you move the piece to the left\n" <<
