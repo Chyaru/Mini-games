@@ -11,16 +11,17 @@ class Ahorcado
     string palabras[3][10] = {
         // facil
         "person", "extend", "lookout", "eloquent", "cellular",
-        "bat", "pimp", "yo-yo", "literal", "game",
+        "bat", "pimp", "yoyo", "literal", "game",
         // medio
-        "not permitted", "rights do not exist", "mexcican politics", "no longer being sold", "people have to work",
-        "I need medicine", "I have the flu", "I have a sore throat", "I'm not getting out of this", "I have faith",
+        "not permitted", "rights do not exist", "mexican politics", "no longer being sold", "people have to work",
+        "I need medicine", "I have the flu", "I have a sore throat", "Im not getting out of this", "I have faith",
         // dificil
-        "I don't want to hear any more excuses", "you told me you loved me", "but they were all lies", "to sweeten my ears", "to sweeten my ears",
-        "but they were all lies", "sweeten my ears",
-        "enlighten me and tell me," "what was I really to you,"
-        "a simple distraction," "someone with an expensive car,"
-        "I don't care to know", "I'm fine on my own", "I'm fine on my own", "I'm not interested in knowing"
+        "I dont want to hear any more excuses", "you told me you loved me",
+        "but they were all lies", "to sweeten my ears",
+        "but they were all lies",
+        "enlighten me and tell me", "what was I really to you",
+        "a simple distraction,", "someone with an expensive car,"
+        "I dont care to know", "Im fine on my own"
     };
     string ahorcado[7] = {
         "-------------\n|           |\n|\n|\n|\n|\n|\n|\n",//0
